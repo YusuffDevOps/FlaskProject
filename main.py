@@ -16,11 +16,15 @@ def login_page():
         username = request.form.get("username")
         password = request.form.get("password")
         if get_pw(username) == password:
-            return render_template("secrets.html", username=username)
+            return redirect(url_for("secrets_page", username=username))
         else:
             flash('Please check your login details and try again.')
             return redirect(url_for("login_page"))
 
+
+@app.route("/secrets/<username>")
+def secrets_page(username):
+    return render_template("secrets.html", username=username)
 
 
 @app.route("/create", methods = ["GET", "POST"])
