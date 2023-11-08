@@ -1,0 +1,23 @@
+body{
+    text-align:center;
+    margin: auto;
+}
+
+input{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn{
+width: 181px;
+}
